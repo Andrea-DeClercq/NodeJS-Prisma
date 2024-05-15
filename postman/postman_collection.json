@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "64606c59-11f0-48b4-9c4c-66759b1a033f",
-		"name": "TP NODE Andréa",
+		"name": "TP NODE",
 		"description": "Définir un environnement.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "26968338"
@@ -394,6 +394,105 @@
 							"path": [
 								"projets",
 								"099"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Affilliation",
+			"item": [
+				{
+					"name": "Affiliations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/affiliations",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"affiliations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Affiliations spécifique",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/affiliations/p01/1/2018",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"affiliations",
+								"p01",
+								"1",
+								"2018"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add affiliations",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "NP",
+									"value": "p01",
+									"type": "text"
+								},
+								{
+									"key": "NC",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "ANNEE",
+									"value": "1999",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/affiliations",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"affiliations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete affiliation",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/affiliations/p01/5/1999",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"affiliations",
+								"p01",
+								"5",
+								"1999"
 							]
 						}
 					},

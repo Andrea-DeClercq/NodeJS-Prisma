@@ -191,9 +191,10 @@ app.get('/affiliations', async (req, res) => {
 
 app.get('/affiliations/:NP/:NC/:ANNEE', async (req, res) => {
     const { NP, NC, ANNEE } = req.params;
+    console.log(req.params)
     try {
-        const affiliation = await prisma.aff.findUnique({
-            where: { NP, NC: parseInt(NP), ANNEE: parseInt(ANNEE) }
+        const affiliation = await prisma.aff.findFirst({
+            where: { NP, NC: parseInt(NC), ANNEE: parseInt(ANNEE) }
         });
         if (!affiliation) {
             return res.status(404).send('Affiliation non trouvée');
@@ -204,12 +205,12 @@ app.get('/affiliations/:NP/:NC/:ANNEE', async (req, res) => {
         res.status(500).send('Erreur lors de la récupération de l\'affiliation');
     }
 });
-
+//Définir une clé unique pour pouvoir supprimé une affiliation
 app.delete('/affiliations/:NP/:NC/:ANNEE', async (req, res) => {
     const { NP, NC, ANNEE } = req.params;
     try {
         await prisma.aff.delete({
-            where: { NP, NC: parseInt(NP), ANNEE: parseInt(ANNEE) }
+            where: { NP_NC_ANNEE: { NP, NC: parseInt(NC), ANNEE: parseInt(ANNEE) } }
         });
         res.send('Affiliation supprimée avec succès');
     } catch (error) {
