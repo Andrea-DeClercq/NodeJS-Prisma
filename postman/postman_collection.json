@@ -1,0 +1,614 @@
+{
+	"info": {
+		"_postman_id": "64606c59-11f0-48b4-9c4c-66759b1a033f",
+		"name": "TP NODE Andréa",
+		"description": "Définir un environnement.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26968338"
+	},
+	"item": [
+		{
+			"name": "Chercheur",
+			"item": [
+				{
+					"name": "Chercheurs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/chercheurs",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"chercheurs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Chercheurs Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/chercheurs/9999",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"chercheurs",
+								"9999"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Chercheurs",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/chercheurs/9999",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"chercheurs",
+								"9999"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Chercheurs",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "PRENOM",
+									"value": "TEST",
+									"type": "text"
+								},
+								{
+									"key": "NOM",
+									"value": "TEST",
+									"type": "text"
+								},
+								{
+									"key": "NE",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "NC",
+									"value": "9999",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/chercheurs",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"chercheurs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update chercheurs",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "PRENOM",
+									"value": "TEST",
+									"type": "text"
+								},
+								{
+									"key": "NOM",
+									"value": "TEST",
+									"type": "text"
+								},
+								{
+									"key": "NE",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/chercheurs/9999",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"chercheurs",
+								"9999"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Equipe",
+			"item": [
+				{
+					"name": "Equipe",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/equipes",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"equipes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Equipe Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/equipes/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"equipes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Equipe",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/equipes/7",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"equipes",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Equipe",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "NOM",
+									"value": "TEST",
+									"type": "text"
+								},
+								{
+									"key": "NE",
+									"value": "7",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/equipes",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"equipes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Equipe",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "NOM",
+									"value": "TEST EQUIPE",
+									"type": "text"
+								},
+								{
+									"key": "NE",
+									"value": "7",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/equipes/7",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"equipes",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Projet",
+			"item": [
+				{
+					"name": "Projet",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/projets",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Projet Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/projets/099",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projets",
+								"099"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Projet",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/projets/099",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projets",
+								"099"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Projet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "NOM",
+									"value": "TEST",
+									"type": "text"
+								},
+								{
+									"key": "NP",
+									"value": "099",
+									"type": "text"
+								},
+								{
+									"key": "BUDGET",
+									"value": " 1242424",
+									"type": "text"
+								},
+								{
+									"key": "NE",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/projets",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Projet",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "NOM",
+									"value": "TEST PROJET",
+									"type": "text"
+								},
+								{
+									"key": "BUDGET",
+									"value": "33.33",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/projets/099",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"projets",
+								"099"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "1. Budgets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/budgets",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"budgets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Projet budget",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/projets-budget?min=20000&max=100000",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"projets-budget"
+					],
+					"query": [
+						{
+							"key": "min",
+							"value": "20000"
+						},
+						{
+							"key": "max",
+							"value": "100000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Chercheur avec les équipes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/chercheurs-avec-equipe",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"chercheurs-avec-equipe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. Chercheur avec projets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/equipes-avec-projets",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"equipes-avec-projets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. Chercheur participation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/chercheurs-participation?annee=2018&budget=1000",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"chercheurs-participation"
+					],
+					"query": [
+						{
+							"key": "annee",
+							"value": "2018"
+						},
+						{
+							"key": "budget",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6. Chercheur participation projet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/chercheurs-participation-projet?nom=BOUGUEROUA&annee=2018",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"chercheurs-participation-projet"
+					],
+					"query": [
+						{
+							"key": "nom",
+							"value": "BOUGUEROUA"
+						},
+						{
+							"key": "annee",
+							"value": "2018"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7. Projet sans Budget > Annee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/projets-budget-superieur?annee=2018",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"projets-budget-superieur"
+					],
+					"query": [
+						{
+							"key": "annee",
+							"value": "2018"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7. Projet avec Budget > Annee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/projets-budget-superieur?annee=2018&budget=100000",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"projets-budget-superieur"
+					],
+					"query": [
+						{
+							"key": "annee",
+							"value": "2018"
+						},
+						{
+							"key": "budget",
+							"value": "100000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8. Projet avec Chercheur A & B",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/projets-par-chercheurs?nomA=BOUGUEROUA&nomB=NAHLE",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"projets-par-chercheurs"
+					],
+					"query": [
+						{
+							"key": "nomA",
+							"value": "BOUGUEROUA"
+						},
+						{
+							"key": "nomB",
+							"value": "NAHLE"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
